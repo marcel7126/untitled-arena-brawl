@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://UI/FLOATING_TEXT/floating_text.gd" type="Script" id=1]
+
+[node name="label" type="RichTextLabel"]
+modulate = Color( 0.313726, 0.894118, 0.211765, 1 )
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 1 )

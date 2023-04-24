@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://UI/PLAYER_UI/ability_slot.gd" type="Script" id=1]
+
+[sub_resource type="Gradient" id=10]
+colors = PoolColorArray( 1, 0.679688, 0, 1, 0, 0, 0, 1 )
+
+[sub_resource type="GradientTexture2D" id=11]
+gradient = SubResource( 10 )
+fill = 1
+fill_from = Vector2( 0.5, 0.5 )
+
+[sub_resource type="Gradient" id=8]
+offsets = PoolRealArray( 0 )
+colors = PoolColorArray( 0, 0, 0, 0.588235 )
+
+[sub_resource type="GradientTexture2D" id=9]
+gradient = SubResource( 8 )
+
+[node name="ability_slot" type="Control"]
+margin_right = 64.0
+margin_bottom = 64.0
+script = ExtResource( 1 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = SubResource( 11 )
+
+[node name="TextureProgress" type="TextureProgress" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+texture_progress = SubResource( 9 )
+fill_mode = 3
+
+[node name="time" type="Label" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "0.0s"
+align = 1
+valign = 1
+
+[node name="slot_name" type="Label" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "Q"
+
+[connection signal="mouse_entered" from="." to="." method="_on_ability_slot_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_ability_slot_mouse_exited"]
+[connection signal="gui_input" from="TextureRect" to="." method="_on_TextureRect_gui_input"]

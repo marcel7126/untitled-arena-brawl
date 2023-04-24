@@ -1,0 +1,75 @@
+[gd_scene format=2]
+
+[node name="chat" type="Control"]
+margin_right = 224.0
+margin_bottom = 182.0
+
+[node name="panel" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="vbox" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="tabs" type="HBoxContainer" parent="vbox"]
+margin_right = 224.0
+margin_bottom = 14.0
+
+[node name="all" type="Label" parent="vbox/tabs"]
+visible = false
+margin_right = 17.0
+margin_bottom = 14.0
+text = "All"
+
+[node name="system" type="Label" parent="vbox/tabs"]
+visible = false
+margin_left = 21.0
+margin_right = 68.0
+margin_bottom = 14.0
+text = "System"
+
+[node name="party" type="Label" parent="vbox/tabs"]
+margin_right = 32.0
+margin_bottom = 14.0
+text = "Party"
+
+[node name="game" type="Label" parent="vbox/tabs"]
+visible = false
+margin_left = 108.0
+margin_right = 146.0
+margin_bottom = 14.0
+text = "Game"
+
+[node name="team" type="Label" parent="vbox/tabs"]
+visible = false
+margin_left = 108.0
+margin_right = 143.0
+margin_bottom = 14.0
+text = "Team"
+
+[node name="chat_text" type="RichTextLabel" parent="vbox"]
+margin_top = 18.0
+margin_right = 224.0
+margin_bottom = 154.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="message" type="HBoxContainer" parent="vbox"]
+margin_top = 158.0
+margin_right = 224.0
+margin_bottom = 182.0
+
+[node name="tab" type="Label" parent="vbox/message"]
+visible = false
+margin_top = 5.0
+margin_right = 40.0
+margin_bottom = 19.0
+text = "[party]"
+
+[node name="input" type="LineEdit" parent="vbox/message"]
+margin_right = 224.0
+margin_bottom = 24.0
+size_flags_horizontal = 3

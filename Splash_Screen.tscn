@@ -1,0 +1,174 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://IMG_2942.JPG" type="Texture" id=1]
+[ext_resource path="res://Splash_Screen.gd" type="Script" id=2]
+
+[node name="Splash_Screen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+
+[node name="Img2942(360x270)" type="Sprite" parent="."]
+position = Vector2( 510, 300 )
+scale = Vector2( 3, 2.25 )
+texture = ExtResource( 1 )
+
+[node name="hint_text" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.9
+anchor_right = 0.5
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+text = "press any key to continue"
+
+[node name="hbox2" type="HBoxContainer" parent="."]
+visible = false
+margin_left = 396.0
+margin_top = 816.0
+margin_right = 628.0
+margin_bottom = 984.0
+
+[node name="margin_left" type="MarginContainer" parent="hbox2"]
+margin_right = 16.0
+margin_bottom = 168.0
+rect_min_size = Vector2( 16, 0 )
+
+[node name="vbox" type="VBoxContainer" parent="hbox2"]
+margin_left = 20.0
+margin_right = 212.0
+margin_bottom = 168.0
+
+[node name="margin_top" type="MarginContainer" parent="hbox2/vbox"]
+margin_right = 192.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 0, 16 )
+
+[node name="Container" type="MarginContainer" parent="hbox2/vbox"]
+margin_top = 20.0
+margin_right = 192.0
+margin_bottom = 148.0
+rect_min_size = Vector2( 192, 128 )
+
+[node name="vbox_content" type="VBoxContainer" parent="hbox2/vbox/Container"]
+margin_right = 192.0
+margin_bottom = 128.0
+
+[node name="LineEdit10" type="LineEdit" parent="hbox2/vbox/Container/vbox_content"]
+margin_right = 192.0
+margin_bottom = 24.0
+
+[node name="margin_bottom" type="MarginContainer" parent="hbox2/vbox"]
+margin_top = 152.0
+margin_right = 192.0
+margin_bottom = 168.0
+rect_min_size = Vector2( 0, 16 )
+
+[node name="margin_right" type="MarginContainer" parent="hbox2"]
+margin_left = 216.0
+margin_right = 232.0
+margin_bottom = 168.0
+rect_min_size = Vector2( 16, 0 )
+
+[node name="center" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 600.0
+margin_bottom = 600.0
+
+[node name="panel" type="PanelContainer" parent="center"]
+margin_left = 410.0
+margin_top = 189.0
+margin_right = 613.0
+margin_bottom = 411.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="margin" type="MarginContainer" parent="center/panel"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 196.0
+margin_bottom = 215.0
+
+[node name="hbox" type="HBoxContainer" parent="center/panel/margin"]
+margin_right = 189.0
+margin_bottom = 208.0
+alignment = 1
+
+[node name="margin_left" type="MarginContainer" parent="center/panel/margin/hbox"]
+margin_right = 32.0
+margin_bottom = 208.0
+rect_min_size = Vector2( 32, 0 )
+
+[node name="vbox" type="VBoxContainer" parent="center/panel/margin/hbox"]
+margin_left = 36.0
+margin_right = 153.0
+margin_bottom = 208.0
+size_flags_horizontal = 3
+
+[node name="margin_top" type="MarginContainer" parent="center/panel/margin/hbox/vbox"]
+margin_right = 117.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 0, 32 )
+
+[node name="title" type="Label" parent="center/panel/margin/hbox/vbox"]
+margin_top = 36.0
+margin_right = 117.0
+margin_bottom = 50.0
+text = "Login"
+
+[node name="margin_title" type="MarginContainer" parent="center/panel/margin/hbox/vbox"]
+margin_top = 54.0
+margin_right = 117.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 0, 16 )
+
+[node name="username_label" type="Label" parent="center/panel/margin/hbox/vbox"]
+margin_top = 74.0
+margin_right = 117.0
+margin_bottom = 88.0
+text = "Username"
+
+[node name="username_input" type="LineEdit" parent="center/panel/margin/hbox/vbox"]
+margin_top = 92.0
+margin_right = 117.0
+margin_bottom = 116.0
+text = "marcel"
+
+[node name="margin1" type="MarginContainer" parent="center/panel/margin/hbox/vbox"]
+margin_top = 120.0
+margin_right = 117.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 0, 8 )
+
+[node name="commit_login" type="Button" parent="center/panel/margin/hbox/vbox"]
+margin_top = 132.0
+margin_right = 117.0
+margin_bottom = 152.0
+text = "Login"
+
+[node name="margin_bottom" type="MarginContainer" parent="center/panel/margin/hbox/vbox"]
+margin_top = 156.0
+margin_right = 117.0
+margin_bottom = 172.0
+rect_min_size = Vector2( 0, 16 )
+
+[node name="guest" type="Label" parent="center/panel/margin/hbox/vbox"]
+margin_top = 176.0
+margin_right = 117.0
+margin_bottom = 190.0
+text = "Continue as Guest"
+
+[node name="create_account" type="Label" parent="center/panel/margin/hbox/vbox"]
+margin_top = 194.0
+margin_right = 117.0
+margin_bottom = 208.0
+text = "Create an Account"
+
+[node name="margin_right" type="MarginContainer" parent="center/panel/margin/hbox"]
+margin_left = 157.0
+margin_right = 189.0
+margin_bottom = 208.0
+rect_min_size = Vector2( 32, 0 )
+
+[connection signal="pressed" from="center/panel/margin/hbox/vbox/commit_login" to="." method="_on_commit_login_pressed"]

@@ -1,0 +1,11 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://GAME/PLAYER/player_controlled_unit.gd" type="Script" id=1]
+[ext_resource path="res://GAME/UNITS/unit.tscn" type="PackedScene" id=2]
+[ext_resource path="res://GAME/UNITS/player_unit.gd" type="Script" id=3]
+
+[node name="player_unit" instance=ExtResource( 2 )]
+script = ExtResource( 3 )
+
+[node name="player_controlled_unit" type="Node" parent="." index="3"]
+script = ExtResource( 1 )

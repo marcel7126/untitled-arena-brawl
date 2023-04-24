@@ -1,0 +1,67 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://UI/HEALTHBAR/healthbar_base.gd" type="Script" id=2]
+[ext_resource path="res://UI/HEALTHBAR/RESOURCES/hpbar_universal.tres" type="Texture" id=3]
+[ext_resource path="res://UI/HEALTHBAR/health.gd" type="Script" id=4]
+
+[sub_resource type="Gradient" id=8]
+offsets = PoolRealArray( 0 )
+colors = PoolColorArray( 0.2, 0.2, 0.2, 1 )
+
+[sub_resource type="GradientTexture2D" id=9]
+gradient = SubResource( 8 )
+width = 1
+height = 1
+
+[node name="healthbar" type="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -32.0
+margin_top = -4.0
+margin_right = 32.0
+margin_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource( 2 )
+
+[node name="health_background" type="TextureRect" parent="."]
+margin_right = 2.0
+margin_bottom = 1.0
+texture = SubResource( 9 )
+expand = true
+
+[node name="health" type="TextureRect" parent="."]
+margin_right = 2.0
+margin_bottom = 1.0
+texture = ExtResource( 3 )
+expand = true
+script = ExtResource( 4 )
+
+[node name="health_text" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -32.0
+margin_top = -18.0
+margin_right = 13.0
+margin_bottom = -4.0
+text = "70/100"
+
+[node name="shields" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="arrow" type="Polygon2D" parent="."]
+visible = false
+position = Vector2( 32, 8 )
+color = Color( 0.25098, 0.25098, 0.25098, 1 )
+polygon = PoolVector2Array( -5, 0, 0, 5, 5, 0 )
+
+[node name="status" type="Label" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 8.0
+margin_bottom = 14.0

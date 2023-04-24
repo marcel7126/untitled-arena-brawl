@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="Curve2D" id=1]
+_data = {
+"points": PoolVector2Array( 68.9221, 73.4171, -68.9221, -73.4171, 570, 271, 0, 0, 0, 0, 764, 464, 0, 0, 0, 0, 854, 328, 0, 0, 0, 0, 863, 176, 0, 0, 0, 0, 777, 91, 95.8917, -173.804, -95.8917, 173.804, 370, 293, -47.9458, -22.4746, 47.9458, 22.4746, 454, 536, -8.98984, 128.854, 8.98984, -128.854, 629, 519, 191.783, 35.9594, -191.783, -35.9594, 555, 463, 0, 0, 0, 0, 538, 333, 0, 0, 0, 0, 538, 333, 0, 0, 0, 0, 570, 271 )
+}
+
+[node name="generated_level" type="Node2D"]
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+polygon = PoolVector2Array( 341, 190, 340, 293, 523, 346, 701, 329, 788, 229, 640, 181, 520, 209, 542, 127, 434, 127 )
+
+[node name="Line2D" type="Line2D" parent="."]
+visible = false
+points = PoolVector2Array( 115, 305, 145, 424, 380, 446, 583, 427, 659, 126, 454, 66, 211, 184, 275, 283 )
+
+[node name="Path2D" type="Path2D" parent="."]
+visible = false
+position = Vector2( 16, -74 )
+curve = SubResource( 1 )

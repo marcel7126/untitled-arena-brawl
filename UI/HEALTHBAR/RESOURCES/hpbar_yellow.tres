@@ -1,0 +1,10 @@
+[gd_resource type="GradientTexture2D" load_steps=2 format=2]
+
+[sub_resource type="Gradient" id=8]
+offsets = PoolRealArray( 0.385965, 1 )
+colors = PoolColorArray( 0.862745, 0.733333, 0.168627, 1, 0.62, 0.529067, 0.124, 1 )
+
+[resource]
+gradient = SubResource( 8 )
+height = 8
+fill_to = Vector2( 0, 1 )
